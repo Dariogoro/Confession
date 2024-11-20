@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untukmu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            text-align: center;
+            color: #fff;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .gift {
+            width: 150px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gift:hover {
+            transform: scale(1.1);
+        }
+
+        .message {
+            display: none;
+            font-size: 1.8em;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #ffefef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hai, untukmu...</h1>
+        <p>Ada kejutan spesial di sini!</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Emoji_u1f381.svg/512px-Emoji_u1f381.svg.png" 
+             alt="Kado" class="gift" id="gift" onclick="showEncouragement()">
+        <div class="message" id="message">
+            Kamu luar biasa! Jangan pernah menyerah. 🌟
+        </div>
+    </div>
+
+    <script>
+        function showEncouragement() {
+            const gift = document.getElementById('gift');
+            const message = document.getElementById('message');
+            gift.style.display = 'none'; // Sembunyikan gambar kado
+            message.style.display = 'block'; // Tampilkan pesan penyemangat
+        }
+    </script>
+</body>
+</html>
